@@ -1,0 +1,139 @@
+<div class="container">
+
+  <mat-card class="header">
+    <span class="texto">Hola, Camila</span>
+    <mat-icon class="icon degrade">notifications_none</mat-icon>
+  </mat-card>
+
+  <mat-card class="invest_card">
+    <span class="texto subtitulo">Eres estratega</span>
+    <img src="../assets/image.png" alt="" class="imagen1">
+    <span class="texto subtitulo2">Tu saldo</span>
+    <span class="texto subtitulo3">$1.570.000</span>
+  </mat-card>
+
+  <mat-card class="invest_summary">
+    <span class="texto2 inversion">Inversión</span>
+    <span class="texto2 valor_inversion">$1.600.000</span>
+    <hr>
+    <span class="texto2 rendimiento">Rendimiento</span>
+    <span class="texto2 valor_rendimiento">-$30.000</span>    
+  </mat-card>
+
+  <mat-card class="secondheader header">
+    <span class="texto">Tus metas</span>
+    <mat-icon class="icon degrade">add_circle_outline</mat-icon>    
+  </mat-card>
+
+  <div class="goal_view_container">
+    <mat-card class="goal_view">
+      <img src="../assets/palm.png" alt="" class="imagen2">
+      <span class="texto2 viaje">Viaje a islas Canarias</span>    
+      <hr>
+        <canvas baseChart class="chart1"        
+          [data]="data"
+          [colors]="doughnutColors"
+          [chartType]="ChartType"
+          [options]='chartOptions'>
+        </canvas>        
+      <span class="texto2 caption1 degrade">$1.630.000</span>
+      <span class="texto2 caption2">$8.000.000</span>
+    </mat-card>
+    <mat-card class="goal_view">
+      <img src="../assets/mac.png" alt="" class="imagen2">
+      <span class="texto viaje">Macbook Pro</span>    
+      <hr>
+        <canvas baseChart class="chart1"
+          [data]="data2"
+          [colors]="doughnutColors2"
+          [chartType]="ChartType"
+          [options]='chartOptions'>
+        </canvas>        
+      <span class="texto2 caption1 degrade">$0</span>
+      <span class="texto2 caption2">$7.000.000</span>    
+    </mat-card>
+  </div>
+  <mat-card class="secondheader header">
+    <span class="texto">Conoce tu portafolio</span>
+    <span class="texto estratega_logo">Estratega</span>    
+  </mat-card>
+
+  <mat-card class="portafolio">
+    <img src="../assets/logo.png" alt="" class="imagen3">
+    <span class="texto descuento">15%</span>
+    <span class="texto2 mutual">FIC Old Mutual Efectivo</span>
+    <span class="texto costo">$240.000</span>
+    <span class="texto activo">Tipo de activo</span>
+    <span class="texto2 renta">Renta fija <br> Depósito a la fija</span>
+    <mat-icon class="nav_left">keyboard_arrow_left</mat-icon>        
+    <mat-icon class="nav_right">keyboard_arrow_right</mat-icon>    
+    <img src="../assets/robot.png" alt="" class="imagen4">
+    <span class="texto2 robot">RoboAdvisor</span>
+    <span class="texto2 fondos">10 Fondos</span>
+    <canvas baseChart class="chart3"
+      [data]="data3"
+      [colors]="doughnutColors3"
+      [chartType]="ChartType"
+      [options]='chartOptions'>
+    </canvas> 
+    <span class="texto2 mensaje">Tu  dinero se invierte de la forma más eficiente de acuerdo al perfil de riesgo asignado por nuestro RoboAdvisor.</span>
+  </mat-card>
+
+  <mat-card class="secondheader header">
+    <span class="texto">Los P*t@s del ahorro</span>
+  </mat-card>  
+  <div class="media">
+    <img src="../assets/media.png" class="imagen5">
+    <svg height="122" width="327">
+      <defs>
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#54D1ED;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#2C52D8;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path d="M 0 20 Q 80 0, 144 15, 250 50,327 40  L 327 122 L 0 122 Z" stroke="blue" stroke-width="0" fill="url(#grad3)" />
+    </svg>  
+    <span class="texto ahorro">Esto es AHORRO</span>
+    <span class="texto2 mensaje2">Conoce como nuestro RoboAdvisor crea el mejor portafolio de inversión para ti.</span>
+  </div>
+ 
+  <mat-card class="counter">
+    <mat-icon class="degrade">fiber_manual_record</mat-icon>
+    <mat-icon style="color: #D7C7FF;">fiber_manual_record</mat-icon>
+    <mat-icon style="color: #D7C7FF;">fiber_manual_record</mat-icon>
+  </mat-card>
+
+  <div class="blog">
+    <div class= "seccion">
+      <span class="Titulo texto2">10 gastos que debes evitar</span>
+      <span class="educacion texto2">Aunque el 66% de los adultos recibió educación para el ahorro, 
+                                     apenas el 44% ahorra de manera fomal.</span>
+      <img src="../assets/ahorro1.png" class="imagen6">
+
+    </div>
+    <div class= "seccion">
+      <span class="Titulo texto2">10 gastos que debes evitar</span>
+      <span class="educacion texto2">Aunque el 66% de los adultos recibió educación para el ahorro, 
+                                     apenas el 44% ahorra de manera fomal.</span>
+      <img src="../assets/ahorro2.png" class="imagen6">
+
+    </div>
+    <div class= "seccion">
+      <span class="Titulo texto2">10 gastos que debes evitar</span>
+      <span class="educacion texto2">Aunque el 66% de los adultos recibió educación para el ahorro, 
+                                     apenas el 44% ahorra de manera fomal.</span>
+      <img src="../assets/ahorro3.png" class="imagen6">
+    </div>  
+
+  </div>
+
+  <div class="menu">    
+    <div class="item" *ngFor="let item of items">
+      <mat-icon class="iconos">{{item.icono}}</mat-icon>
+      <span>{{item.nombre}}</span>
+    </div>
+    <mat-icon class="simbolo degrade">add_circle</mat-icon>
+  </div>
+
+
+</div>
